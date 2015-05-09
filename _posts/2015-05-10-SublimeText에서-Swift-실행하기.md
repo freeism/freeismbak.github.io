@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "SublimeText에서 Swift실행하기"
+title: "SublimeText에서 Swift 실행하기"
 author: "freeism"
 description: ""
 category: "Development" 
