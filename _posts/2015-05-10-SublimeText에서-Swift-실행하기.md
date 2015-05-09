@@ -10,7 +10,7 @@ tags: ["Mac", "Swift", "SublimeText"]
 
 1) Package Install에서 Swift Plugin을 설치한다.
 
-2) ~/Library/Application Support/Sublime Text 2/Packages/Swift에 아래 코드를 *swift.sublime-build"로 저장한다.  
+2) ~/Library/Application Support/Sublime Text 2/Packages/Swift에 아래 코드를 *swift.sublime-build*로 저장한다.  
 {% highlight json %}
 {
     "cmd": ["swift", "$file"],
