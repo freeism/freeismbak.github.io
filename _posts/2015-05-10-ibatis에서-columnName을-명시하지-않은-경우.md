@@ -1,3 +1,13 @@
+---
+layout: post
+title: "ibatis에서 columnName을 명시하지 않은 경우"
+author: "freeism"
+description: ""
+category: "Development" 
+tags: ["Java", "Ibatis"]
+---
+{% include JB/setup %}
+
 신입사원 코드 리뷰를 하는데 이상한 부분이 있어서 찾아본 내용을 적어둡니다.
 
 ```sql
