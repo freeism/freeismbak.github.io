@@ -24,5 +24,5 @@ tags: ["Mac", "Swift", "SublimeText"]
 let sayHello: String = "Hello Swift World"
 println("\(sayHello)")
 {% endhighlight %}
-> Hello Swift World
+> Hello Swift World  
 [Finished in 0.6s]
