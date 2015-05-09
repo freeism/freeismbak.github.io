@@ -10,7 +10,7 @@ tags: ["Java", "Ibatis"]
 
 신입사원 코드 리뷰를 하는데 이상한 부분이 있어서 찾아본 내용을 적어둡니다.
 
-{% highlight sql %}
+{% highlight xml %}
 <resultMap>
 	<result property="goodsId"/>
     ... 
