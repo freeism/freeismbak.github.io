@@ -10,7 +10,7 @@ tags: ["Java", "Ibatis"]
 
 신입사원 코드 리뷰를 하는데 이상한 부분이 있어서 찾아본 내용을 적어둡니다.
 
-```sql
+```
 <resultMap>
 	<result property="goodsId"/>
     ... 
@@ -30,7 +30,7 @@ tags: ["Java", "Ibatis"]
   
 ibatis입니다. 
 
-```java
+```
 if (columnName == null) {
     value = typeHandler.getResult(rs, columnIndex); 
 } else { 
@@ -39,7 +39,7 @@ if (columnName == null) {
 ```
 columnName이 없는 경우 columnIndex 값을 활용하게 되어 있습니다. 
 
-```java
+```
 if (columnIndex != null) {
     mapping.setColumnIndex(columnIndex.intValue()); 
 } else { 
@@ -53,7 +53,7 @@ columnIndex가 없는 경우 ++연산자를 통해 선언된 순서대로 내부
 
 참고로 mybatis에서는 columnIndex라는 기능이 제거되었습니다.  
 (아무래도 명시적이지 않고, 버그의 원천이 될 위험이...) 
-```java
+```
 if (columnIndexProp != null) {
     throw new UnsupportedOperationException(
         "Numerical column indices are not supported.  Use the column name instead."
