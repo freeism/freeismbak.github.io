@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "Jekyll Bootstrap 사용하기"
+author: "freeism"
 description: ""
 category: "Life" 
-tags: ["Blog"]
+tags: ["Blog", "Jekyll", "Github"]
 ---
 {% include JB/setup %}
 

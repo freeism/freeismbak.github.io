@@ -1,44 +1,51 @@
-<div class="page-header">
-  <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
-</div>
-
-<div class="row post-full">
+<div class="row">
   <div class="col-xs-12">
-    <div class="date">
+    <div class="page-header">
+      <h1>{{ page.title }}</h1>
+      <p>by {{ page.author }}</p>
+    </div>
+  </div>
+  
+  <div class="col-xs-12 col-sm-9">
+      {{ content }}
+  </div>
+
+  <div class="col-xs-12 col-sm-3">
+    <div class="post-date">
+      <i class="glyphicon glyphicon-pencil"></i>
       <span>{{ page.date | date_to_long_string }}</span>
     </div>
-    <div class="content">
-      {{ content }}
-    </div>
 
-  {% unless page.categories == empty %}
-    <ul class="tag_box inline">
-      <li><i class="glyphicon glyphicon-open"></i></li>
-      {% assign categories_list = page.categories %}
-      {% include JB/categories_list %}
-    </ul>
-  {% endunless %}  
+    {% unless page.categories == empty %}
+      <ul class="tag_box inline">
+        <li><i class="glyphicon glyphicon-open"></i></li>
+        {% assign categories_list = page.categories %}
+        {% include JB/categories_list %}
+      </ul>
+    {% endunless %}  
 
-  {% unless page.tags == empty %}
-    <ul class="tag_box inline">
-      <li><i class="glyphicon glyphicon-tags"></i></li>
-      {% assign tags_list = page.tags %}
-      {% include JB/tags_list %}
-    </ul>
-  {% endunless %}  
-  
+    {% unless page.tags == empty %}
+      <ul class="tag_box inline">
+        <li><i class="glyphicon glyphicon-tags"></i></li>
+        {% assign tags_list = page.tags %}
+        {% include JB/tags_list %}
+      </ul>
+    {% endunless %}  
+  </div>
+
+  <div class="col-xs-12">
     <hr>
     <ul class="pagination">
     {% if page.previous %}
-      <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; Previous</a></li>
+      <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; 이전글</a></li>
     {% else %}
-      <li class="prev disabled"><a>&larr; Previous</a></li>
+      <li class="prev disabled"><a>&larr; 이전글</a></li>
     {% endif %}
-      <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
+      <!--li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li-->
     {% if page.next %}
-      <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &raquo;</a></li>
+      <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">다음글 &raquo;</a></li>
     {% else %}
-      <li class="next disabled"><a>Next &rarr;</a>
+      <li class="next disabled"><a>다음글 &rarr;</a>
     {% endif %}
     </ul>
     <hr>
